@@ -1,0 +1,160 @@
+:root {
+    --card-width: 360px;
+    --bg: linear-gradient(135deg, #667eea, #764ba2);
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --text: white;
+}
+
+.dark {
+    --bg: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    --card-bg: rgba(0, 0, 50, 0.6);
+    --text: #e0f0ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.container {
+    width: var(--card-width);
+    background: var(--card-bg);
+    backdrop-filter: blur(14px);
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+input,
+button {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+}
+
+input {
+    padding: 0 10px;
+}
+
+button {
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+    color: white;
+    cursor: pointer;
+}
+
+#themeBtn {
+    background: linear-gradient(135deg, #2193b0, #6dd5ed);
+}
+
+.result-box {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 8px;
+    text-align: left;
+}
+
+#history {
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.history-item {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 8px;
+    margin: 6px 0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+/* 📱 Responsive Design for All Devices */
+
+@media (max-width: 768px) {
+    :root {
+        --card-width: 90%;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    input,
+    button {
+        font-size: 1rem;
+        height: 42px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --card-width: 95%;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    input,
+    button {
+        font-size: 0.9rem;
+        height: 40px;
+    }
+
+    /* Header / Navbar */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    /* History Button */
+    #historyBtn {
+        width: auto;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+        background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    }
+
+    /* Hide history initially */
+    #history {
+        display: none;
+    }
+
+    .result-box {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+/* 💻 Large Screens Optimization */
+@media (min-width: 1024px) {
+    :root {
+        --card-width: 420px;
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+
+    <body>
+
+        <div class="container">
+            <div class="header">
+                <h1>Code Converter</h1>
+                <button onclick="toggleHistory()" id="historyBtn">📜 History</button>
+            </div>
+            <input type="text" id="number" placeholder="Enter number">
+
+            <button onclick="convert()">Convert</button>
+            <button onclick="toggleTheme()" id="themeBtn">🌙 Dark Mode</button>
+
+            <div class="result">
+                <div class="result-box"><span>Decimal:</span> <span id="dec">-</span></div>
+                <div class="result-box"><span>Binary:</span> <span id="bin">-</span></div>
+                <div class="result-box"><span>Hexadecimal:</span> <span id="hex">-</span></div>
+                <div class="result-box"><span>Octal:</span> <span id="oct">-</span></div>
+            </div>
+
+            <h2>History</h2>
+            <div id="history"></div>
+
+            <footer>@all copyrights are reserved 2026</footer>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</body>
+
+</html>
